@@ -1,0 +1,270 @@
+/*首页*/
+  *{
+    margin: 0;
+    padding: 0;
+ }  
+ html,body{
+    width: 1280px;
+    height:700px;
+    margin: 0 auto;
+    transform: translate(0,0);
+ }
+/* 最大盒子 */
+.wrap{
+    position: fixed;
+    box-sizing: border-box;
+    width: 1280px;
+    height:700px;
+    left:0px;
+    top:0;
+    background-image: url("../imges/wrap.jpg");
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    -webkit-background-size:cover;
+    background-size:cover;
+    min-width: 800px;
+    min-height: 600px;
+}
+#logo img{
+    position: fixed;
+    width: 235px;
+    height: 44px;
+    left:10px;
+    top:5px;
+}
+/* 图标 */
+ .nav-ico img{
+   width:35px;
+   height:35px;
+} 
+#nav1 img{
+    position: fixed;
+    left:400px;
+    top:8px;
+}
+#nav2 img{
+    position: fixed;
+    left:464px;
+    top:8px;
+}
+#nav3 img{
+    position: fixed;
+    left:527px;
+    top:8px;
+}
+#nav4 img{
+    position: fixed;
+    left:591px;
+    top:8px;
+}
+#nav5 img{
+    position: fixed;
+    left:654px;
+    top:8px;
+}
+#nav6 img{
+    position: fixed;
+    left:718px;
+    top:8px;
+}
+#nav7 img{
+    position: fixed;
+    left:781px;
+    top:8px;
+}
+#nav8 img{
+    position: fixed;
+    left:845px;
+    top:8px;
+}
+#user img{
+    position: fixed;
+    left:1201px;
+    top:8px;
+    width:35px;
+    height:35px;
+}
+/* 导航栏下的下划线 */
+#hr{
+    position: fixed;
+    width:1280px;
+    height:1px;
+    color:#999999;
+    left:0px;
+    top:53px;
+}
+/* 浮动定位方法 */
+/* 每一个大棚的显示框 */
+li
+{
+    list-style: none;
+}
+.allHouse
+{
+    width:1280px;
+    height:560px;
+    margin:65px auto;
+}
+.main-li1
+{
+    float:left;
+    margin-left:14px;
+    margin-top:20px;
+}
+/* 大棚名字 */
+.pHouseName
+{
+    float:left;
+    margin-left:0px;
+    margin-top:0px;
+    font-family:"微软雅黑";
+    font-weight: bold;
+    font-size: 18px;
+    color:#333333;
+}
+/* 矩形显示框 */
+.li-content
+{
+    float:left;
+    clear: both;
+    margin-left:0px;
+    margin-top:10px;
+    width:408px;
+    height:227px;
+    box-sizing: border-box;
+    border:1px solid #858687;
+    border-radius:10px;
+    background:#ffffff;
+    cursor: pointer;
+}
+.li-content:hover
+{
+    border:1px solid #0066ff;
+}
+/* 文字“种植种类” */
+.li-content p:nth-child(1) .spanEle
+{
+   float: left;
+   width:70px;
+   margin-left:18px;
+   margin-top:16px;
+   font-family:"微软雅黑";
+   font-size: 14px;
+   color:#000000;
+}
+/* 种植种类值 */
+.li-content p:nth-child(1) .cropType
+{
+   float: left;
+   margin-left:3px;
+   margin-top:16px;
+   font-family:"微软雅黑";
+   font-size: 14px;
+   color:#333333;
+}
+/* 文字"收获月份" */
+.li-content p:nth-child(2) .spanEle
+{
+   float: left;
+   clear: left;
+   width:70px;
+   margin-left:18px;
+   margin-top:15px;
+   font-family:"微软雅黑";
+   font-size: 14px;
+   color:#000000;
+}
+/* 收获月份值 */
+.li-content p:nth-child(2) .gainMonthText
+{
+   float: left;
+   margin-left:3px;
+   margin-top:15px;
+   font-family:"微软雅黑";
+   font-size: 14px;
+   color:#333333;
+}
+/* 文字“管理员” */
+.li-content p:nth-child(3) .spanEle
+{
+   float: left;
+   clear: left;
+   width:70px;
+   margin-left:18px;
+   margin-top:15px;
+   font-family:"微软雅黑";
+   font-size: 14px;
+   color:#000000;
+}
+/* 管理员名字 */
+.li-content p:nth-child(3) .managerName a
+{
+   float:left;
+   margin-left:3px;
+   margin-top:15px;
+   font-family:"微软雅黑";
+   font-size: 14px;
+   color:#0066ff;
+   text-decoration: underline;
+}
+/* 作物图片 */
+.li-content .li-content-img
+{
+    width:111px;
+    height:111px;
+    margin-left:0px;
+    margin-top:7px;
+}
+/* 异常信息 */
+/* 图片 */
+.li-content .warnImg
+{
+    float: left;
+    clear: left;
+    margin-left:91px;
+    margin-top:51px;
+    width:27px;
+    height:27px;
+}
+/* 信息 */
+.li-content .yichangInfo
+{
+    float: left;
+    font-family:"微软雅黑";
+    margin-left:10px;
+    margin-top:51px;
+    font-size: 16px;
+    color:#333333;
+}
+/* 页脚 */
+#info{
+    position: fixed;
+    left:413px;
+    top:666px;
+    font-family: "微软雅黑";
+    font-size: 13px;
+    color:#333333;
+}
+#info a
+{
+    text-decoration: none;
+    font-family: "微软雅黑";
+    font-size: 13px;
+    color:#333333;
+}
+#copyRights
+{
+    position: fixed;
+    left:807px;
+    top:666px;
+    font-family: "微软雅黑";
+    font-size: 13px;
+    color:#333333;
+}
+/* 符号 */
+.fuhao
+{   
+    font-family:Arial;
+    font-size: 13px;
+    color:#333333;
+}

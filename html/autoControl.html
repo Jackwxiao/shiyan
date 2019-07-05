@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>远程控制</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/account.css">
+    <link rel="stylesheet" href="../css/autoControl.css">
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/autoControl.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- 页面头部信息 -->
+        <div class="head">
+            <div id="logo">
+                <h1 class="vertical-center">远程控制</h1>
+            </div>
+            <div id="nav">
+                <div id="nav1" title="主页" class="nav-ico" onclick="javascript:location.href='index.html' ">
+                    <img src="../images/home.png" onmouseover="this.src='../images/home.png';" onmouseout="this.src='../images/home.png';">
+                </div>
+                <div id="nav2" title="环境监控" class="nav-ico" onclick="javascript:location.href='Environmental.html' ">
+                    <img src="images/head/nav22.png" onmouseover="this.src='../images/head/nav2.png';" onmouseout="this.src='../images/head/nav22.png';">
+                </div>
+                <div id="nav3" title="视频监控" class="nav-ico">
+                    <img src="../images/head/nav33.png" onmouseover="this.src='images/head/nav3.png';" onmouseout="this.src='../images/head/nav33.png';">
+                </div>
+                <div id="nav4" title="自动控制" class="nav-ico" onclick="javascript:location.href='autoControl.html' ">
+                    <img src="../images/head/nav4.png" onmouseover="this.src='../images/head/nav44.png';" onmouseout="this.src='../images/head/nav4.png';">
+                </div>
+                <div id="nav5" title="历史记录" class="nav-ico" onclick="javascript:location.href='History.html' ">
+                    <img src="../images/head/nav55.png" onmouseover="this.src='../images/head/nav5.png';" onmouseout="this.src='../images/head/nav55.png';">
+                </div>
+                <div id="nav6" title="系统设置" class="nav-ico" onclick="javascript:location.href='setting.html' ">
+                    <img src="../imges/head/nav66.png" onmouseover="this.src='../images/head/nav6.png';" onmouseout="this.src='../images/head/nav66.png';">
+                </div>
+                <!-- <div id="nav7" title="手机端下载" class="nav-ico" onclick="javascript:location.href='MB.html' ">
+                    <img src="imges/head/nav77.png" onmouseover="this.src='imges/head/nav7.png';" onmouseout="this.src='imges/head/nav77.png';">
+                </div>
+                <div id="nav8" title="关于" class="nav-ico" onclick="javascript:location.href='aboutSystem.html' ">
+                    <img src="imges/head/nav88.png" onmouseover="this.src='imges/head/nav8.png';" onmouseout="this.src='imges/head/nav88.png';">
+                </div> -->
+            </div>
+            <div id="user" title="账户">
+                <img src="../images/head/nav99.png" onmouseover="this.src='../images/head/nav9.png';" onmouseout="this.src='../images/head/nav99.png';">
+                <div id="accountForm">
+                    <img src="../images/u122.png" alt="">
+                    <p><a href="userInfo.html" id="ownInfo">个人信息</a></p>
+                    <hr>   
+                    <p><a href="login.html" id="logOff">注销</a></p>
+                </div>
+                <script>
+                    $("#user").click(function () {
+                        $("#accountForm").show();
+                    })
+                    $("#accountForm").mouseleave(function () {
+                        $("#accountForm").hide();
+                    })
+                </script>
+            </div>
+            <hr id="hr">
+        </div>
+        <div id="autoControl-main">
+            <!-- 大棚导航列表 -->
+            <div id="autoControl-list">
+                <img src="../images/left.jpg" alt="左箭头" id="left">
+                <div id="farmList"></div>
+                <img src="../images/right.jpg" alt="右箭头" id="right">
+            </div>
+            <!-- 内容显示 -->
+            <div id="autoControl-show1" class="autoControl-show">
+                <!-- 左侧参数范围部分 -->
+                <!-- <div class="leftRange"> -->
+                    <div id="left-range">
+                        <div id="setAirTempRange" class="setRange">
+    
+                            <!--  空气温度范围 -->
+                            <div class="set">设置适宜
+                                <span id="airTemp" class="param">空气温度</span>范围</div>
+                            <div class="set">
+                                <input type="number" min="10" max="40" class="inputRange" id="inputMin">
+                                <span class="unit">°C</span>
+                                <span class="lianjie">~</span>
+                                <input type="number" min="10" max="40" class="inputRange" id="inputMax">
+                                <span class="unit">°C</span>
+                            </div>
+                            <div class="set">
+                                <button class="btnChange" disabled="disabled" onclick="changeRange(this);">已更改</button>
+                            </div>
+                            <hr/>
+                        </div>
+                        <!-- 空气湿度范围 -->
+                        <div id="setAirMoistRange" class="setRange">
+                            <div class="set">设置适宜
+                                <span id="airMoist" class="param">空气湿度</span>范围</div>
+                            <div class="set">
+                                <input type="number" min="30" max="60" class="inputRange" id="inputMin">
+                                <span class="unit">%</span>
+                                <span class="lianjie">~</span>
+                                <input type="number" min="30" max="60" class="inputRange" id="inputMax">
+                                <span class="unit">%</span>
+                            </div>
+                            <div class="set">
+                                <button class="btnChange" disabled="disabled" onclick="changeRange(this);">已更改</button>
+                            </div>
+                            <hr/>
+                        </div>
+                        <!-- 土壤温度范围 -->
+                        <!-- <div id="setSoilTempRange" class="setRange">
+                            <div class="set">设置适宜
+                                <span id="soilTemp" class="param">土壤温度</span>范围</div>
+                            <div class="set">
+                                <input type="number" min="10" max="40" class="inputRange" id="inputMin">
+                                <span class="unit">°C</span>
+                                <span class="lianjie">~</span>
+                                <input type="number" min="10" max="40" class="inputRange" id="inputMax">
+                                <span class="unit">°C</span>
+                            </div>
+                            <div class="set">
+                                <button class="btnChange" disabled="disabled" onclick="changeRange(this);">已更改</button>
+                            </div>
+                            <hr/>
+                        </div> -->
+                        <!-- 土壤湿度范围 -->
+                        <!-- <div id="setSoilMoistRange" class="setRange">
+                            <div class="set">设置适宜
+                                <span id="soilMoist" class="param">土壤湿度</span>范围</div>
+                            <div class="set">
+                                <input type="number" min="30" max="60" class="inputRange" id="inputMin">
+                                <span class="unit">%</span>
+                                <span class="lianjie">~</span>
+                                <input type="number" min="30" max="60" class="inputRange" id="inputMax">
+                                <span class="unit">%</span>
+                            </div>
+                            <div class="set">
+                                <button class="btnChange" disabled="disabled" onclick="changeRange(this);">已更改</button>
+                            </div>
+                            <hr/>
+                        </div> -->
+                        <!-- 光照强度范围 -->
+                        <div id="setLightIntensity" class="setRange">
+                            <div class="set">设置适宜
+                                <span id="lightIntensity" class="param">光照强度</span>范围</div>
+                            <div class="set">
+                                <input type="number" min="" max="" class="inputRange" id="inputMin">
+                                <span class="unit">Lux</span>
+                                <span class="lianjie">~</span>
+                                <input type="number" min="" max="" class="inputRange" id="inputMax">
+                                <span class="unit">Lux</span>
+                            </div>
+                            <div class="set">
+                                <button class="btnChange" disabled="disabled" onclick="changeRange(this);">已更改</button>
+                            </div>
+                            <hr/>
+                        </div>
+                    </div>
+                <!-- 右侧开关部分 -->
+                <div id="right-switch">
+                    <ul class="rightUl">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 页脚 -->
+        <div id="footer">
+            <p>
+                <p id="info">
+                    版权所有
+                    <span class="fuhao">©&nbsp;2019</span>
+                    <a href="http://www.miit.gov.cn/">计算机学院物联网系</a>
+                </p>
+                <!-- <p id="copyRights">湘
+                    <span class="fuhao">ICP</span>备
+                    <span class="fuhao">17014461</span>号
+                </p> -->
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,337 @@
+*{
+  margin:0;
+  padding:0;
+}
+/* 大棚信息面板 */
+/* 背影矩形 */
+.env-content-left ul{
+  width:200px;
+  height:577px;
+  box-sizing: border-box;
+  position: fixed;
+  left:10px;
+  top:64px;
+  border:1px solid #999999;
+  border-radius: 5px;
+  background:rgba(247, 252, 253, 0.7);
+} 
+/* 大棚信息文字的样式 */
+.span1{
+  font-family:'Microsoft YaHei Regular', 'Microsoft YaHei';
+  color: #000000;
+  font-size: 14px;
+}
+/* 大棚信息值的样式 */
+.span2{
+  font-family:'Microsoft YaHei Regular', 'Microsoft YaHei';
+  color:#333333;
+  font-size: 14px;
+}
+/* 当前位置文字 */
+.env-content-left li:nth-child(1)>.span1{
+  position: fixed;
+  left:26px;
+  top:111px;
+}
+/* 当前位置下拉菜单 */
+.env-content-left li:nth-child(1)>#dapengSelect{
+  list-style:none;
+  width:98px;
+  height: 22px;
+  position: fixed;
+  left:99px;
+  top:110px;
+  font-family:'Arial Regular', 'Arial';
+  font-size: 13px;
+  color:#000000;
+}
+/* 种植种类*/
+.env-content-left li:nth-child(2)>.span1{
+  position: fixed;
+  left: 26px;
+  top:147px;
+}
+/* 种植作物名字 */
+.env-content-left li:nth-child(2)>.span2{
+  position: fixed;
+  left:99px;
+  top:147px;
+}
+/* 种植时间 */
+.env-content-left li:nth-child(3)>.span1{
+  position: fixed;
+  left:26px;
+  top:183px;
+}
+/* 种植时间值 */
+.env-content-left li:nth-child(3)>.span2{
+  position: fixed;
+  left:99px;
+  top:183px;
+}
+/* 收获时间 */
+.env-content-left li:nth-child(4)>.span1{
+  position: fixed;
+  left:26px;
+  top:218px;
+}
+/* 收获时间值 */
+.env-content-left li:nth-child(4)>.span2{
+  position: fixed;
+  left:99px;
+  top:218px;
+}
+/* 适宜温度 */
+.env-content-left li:nth-child(5)>.span1{
+  position: fixed;
+  left:26px;
+  top:254px;
+}
+/* 适宜温度值 */
+.env-content-left li:nth-child(5)>.span2{
+  position: fixed;
+  left:99px;
+  top:254px;
+}
+/* 适宜湿度 */
+.env-content-left li:nth-child(6)>.span1{
+  position: fixed;
+  left:26px;
+  top:290px;
+}
+/* 适宜湿度值 */
+.env-content-left li:nth-child(6)>.span2{
+  position: fixed;
+  left:99px;
+  top:290px;
+}
+/* 管理员 */
+.env-content-left li:nth-child(7)>.span1{
+  position: fixed;
+  left:26px;
+  top:326px;
+}
+/* 管理员名字 */
+.env-content-left li:nth-child(7)>#manager a{
+  position: fixed;
+  left:99px;
+  top:326px;
+  font-family:'Microsoft YaHei Regular', 'Microsoft YaHei';
+  font-size: 14px;
+  color: #0099ff;
+}
+/* 作物图片 */
+.cropImg img{
+  position: fixed;
+  left: 86px;
+  top:515px;
+  width: 120px;
+  height: 120px;
+}
+/* 传感器数据面板 */
+/* 背影矩形 */
+.env-content-right-top{
+  width:1049px;
+  height:266px;
+  box-sizing: border-box;
+  position:relative;
+  left:219px;
+  top:64px;
+  background:rgba(252, 253, 254,0.7);
+  border:1px solid #999999;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#EnvironmentalState
+{
+  position:relative;
+  width:1863px;
+  height:266px;
+  z-index:1;
+}
+/* 每个传感器样式 */
+#EnvironmentalState li
+{
+  float:left;
+  width:160px;
+  height:207px;
+  list-style: none;
+  margin-left:29px;
+  margin-right:17px;
+  margin-top:46px;
+  /* border:1px solid red; */
+}
+/* 传感器名称 */
+#EnvironmentalState li>p
+{
+  margin:0 auto;
+  text-align: center;
+  font-family:"微软雅黑";
+  color:#333333;
+  font-size: 16px;
+}
+/* 传感器状态示意图 */
+.circle{
+  width:160px;
+  height:160px;
+  position: relative;
+  margin:10px auto;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border:3px solid;
+  text-align: center;
+}
+/* 传感器数据 */
+.circle .circle-span1{
+  display: inline-block;
+  font-size:34px;
+  text-align: center;
+  margin-top:43px;
+}
+/* 状态信息 */
+.circle .circle-span2{
+  display: inline-block;
+  font-family: 'Microsoft YaHei Regular', 'Microsoft YaHei';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: #333333;
+  text-align: center;
+  margin-top:6px;
+}
+/* 当前选中传感器指示标志 */
+.circle img{
+  position: absolute;
+  width:35px;
+  height:35px;
+  text-align: center;
+  top: 136px;
+  left:62.5px;
+  z-index: 2;
+  display: none;
+}
+#firstCircle img
+{
+  display:block;
+}
+/* 左按钮 */
+.env-content-right-top #img-left{
+  display: inline-block;
+  position: absolute;
+  border-radius: 5px;
+  z-index: 2;
+  left:0;
+  top:120px;
+  width:30px;
+  height:30px;
+  opacity: 0.4;
+  cursor: pointer;
+} 
+/* 右按钮 */
+.env-content-right-top #img-right{
+  display: inline-block;
+  position: absolute;
+  border-radius: 5px;
+  z-index: 2;
+  right:0;
+  top:120px;
+  width:30px;
+  height:30px;
+  opacity: 0.4;
+  cursor: pointer;
+}
+/* 传感器历史曲线 */
+/* 背景矩形 */
+.env-content-right-bottom-left{
+  position: fixed;
+  width:790px;
+  height:302px;
+  box-sizing: border-box;
+  left:219px;
+  top:339px;
+  background:rgba(252, 253, 254,0.6);
+  border:1px solid #999999;
+  border-radius: 5px;
+}
+/* 右下角便捷开关操作区域 */
+/* 背影矩形 */
+.env-content-right-bottom-right{
+  width:249px;
+  height:302px;
+  box-sizing: border-box;
+  position: fixed;
+  left:1019px;
+  top:339px;
+  background:rgba(241, 247, 253, 0.6);
+  border:1px solid #999999;
+  border-radius: 5px;
+}
+.env-content-right-bottom-right li{
+  width:100%;
+  height:40px;
+  position: relative;
+  list-style: none;
+  font-size: 14px;
+  color: #333;
+  margin-top: 14px;
+}
+.env-content-right-bottom-right li img{
+  width:40px;
+  height: 40px;
+  display: inline-block;
+  margin-left: 20px;
+}
+.env-content-right-bottom-right li span{
+  display: inline-block;
+  margin-left: 10px;
+  position: absolute;
+  top:12px;
+}
+
+.switch-open .open-green{
+  width:60px;
+  height:25px;
+  display: inline-block;
+  border:1px solid #66CC00;
+  position: absolute;
+  right:20px;
+  top:5px;
+  padding-left: 10px;
+  padding-top: 5px;
+  font-size: 18px;
+  color:#fff;
+  background-color:#66CC00;
+}
+.switch-open .open-gray{
+  width:34px;
+  height:30px;
+  display: inline-block;
+  position: absolute;
+  background:#E4E4E4;
+  right:21px;
+  top:6px;
+}
+.switch-close .close-bold-gray{
+  width:60px;
+  height:25px;
+  display: inline-block;
+  border:1px solid #999999;
+  position: absolute;
+  right:20px;
+  top:5px;
+  padding-right: 10px;
+  padding-top: 5px;
+  font-size: 18px;
+  text-align: right;
+  color:#fff;
+  background-color:#999999;
+}
+.switch-close .close-gray{
+  width:34px;
+  height:30px;
+  display: inline-block;
+  position: absolute;
+  background:#E4E4E4;
+  right:57px;
+  top:6px;
+}

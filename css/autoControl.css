@@ -1,0 +1,795 @@
+
+/* 头部水平线 */
+.head #hr
+{
+    position: fixed;
+    margin-top:0;
+    margin-bottom:0;
+    border-top:1px solid #999999;
+    left:0;
+    top:53px;
+}
+/* 主体内容 */
+#autoControl-main
+{
+    position: relative;
+	left:0px;
+	top:77px;
+	width:100%;
+    height:100%;
+}
+/* 标签div */
+#autoControl-list
+{
+    position:absolute;
+	left:140px;
+    top:0px;
+    width:996px;
+    height:30px;
+}
+/* 左移箭头 */
+#autoControl-main #left
+{
+    width:30px;
+    height:30px;
+    position: absolute;
+    left:0px;
+    opacity: 0.4;
+}
+/* 右移箭头 */
+#autoControl-main #right
+{
+    width:30px;
+    height:30px;
+    position: absolute;
+    right:0px;
+    opacity:0.4;
+}
+#autoControl-list #farmList
+{
+    position: absolute;
+    z-index: 3;
+    left:38px;
+    width:920px;
+    height:30px;
+    overflow: hidden;
+}
+#autoControl-list #farmList div{
+    float:left;
+    margin-left:40px;
+	/* z-index:3; */
+	width:200px;
+	height:30px;
+	font-size: 13px;
+	color:#000000;
+	text-align: center;
+	background-image: url("../imges/setting/no_active.png");
+}
+#autoControl-list #farmList div:first-child{
+    float:left;
+    margin-left:0px;
+	z-index:3;
+	width:200px;
+	height:30px;
+	font-size: 13px;
+	color:#000000;
+	text-align: center;
+	background-image: url("../imges/setting/no_active.png");
+}
+/* 标签名字 */
+#autoControl-list .farm-nav span
+{
+    display:inline-block;
+    margin-top:7px;
+}
+
+/* 当前选中标签 */
+#autoControl-list #farmList #active{
+	color:#000000;
+	background-image: url("../imges/setting/active.png");
+}
+#autoControl-list #farmList #active:hover{
+	color:#ffffff;
+	background-image: url("../imges/setting/no_active.png");
+}
+/* 大棚标签 */
+/* 未选中标签的样式 */
+#autoControl-list #farmList #active{
+    color: #000000;
+    background-image: url("../imges/autocontrol/active.png");
+}
+#autoControl-list #farmList div #active:hover{
+    color: #ffffff;
+    background-image: url("../imges/autocontrol/no_active.png");
+}
+/* 未选中标签的样式 */
+#autoControl-list #farmList div:not(#active)
+{   
+    color: #ffffff;
+    background-image: url("../imges/autocontrol/no_active.png");
+}
+#autoControl-list #farmList .farm-nav:not(#active):hover{
+    color: #000000;
+    background-image: url("../imges/autocontrol/active.png");
+}
+/* 整体容器 */
+/* 背影矩形 */
+.autoControl-show{
+    position:relative;
+    background: rgba(255,255,255,0.8);
+    z-index: 2;
+    left:140px;
+    top:29px;
+    width:999px;
+    height:548px;
+    background-image: url("../imges/autocontrol/u4.png");
+}
+
+/* 背景矩形 */
+.autoControl-show #left-range{
+    position:absolute;
+    left:60px;
+    top:11px;
+    width:250px;
+    height: 527px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    background: #ffffff;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+/* 设置适宜空气温度范围 */
+#setAirTempRange .set:nth-child(1)
+{
+    position:absolute;
+    left:55px;
+    top:14px;
+    font-family:"微软雅黑";
+    font-size: 14px;
+    color:#333333;
+}
+/* 空气温度的颜色 */
+#setAirTempRange .set:nth-child(1) #airTemp{
+    color:#66cc00;
+}
+/* 调节按钮 */
+/* 下限文本框 */
+#setAirTempRange .set:nth-child(2) #inputMin
+{
+    position:absolute;
+    /* 45 */
+    left:55px;
+    top:78px;
+    /* 25 */
+    width:35px;
+    height:14px;
+    font-family: Arial;
+    font-size:14px;
+    text-align:right;
+}
+/* 温度 “°C”*/
+#setAirTempRange .set:nth-child(2) .unit:nth-child(2)
+{
+    position: absolute;
+    /* 78 */
+    left:99px;
+    /* 78 */
+    top:80px;
+    font-family:Arial;
+    font-size: 14px;
+    color:#333333;
+    font-weight:lighter;
+}
+/* 下限上调箭头 */
+#setAirTempRange .set:nth-child(2) .img1 .triUp
+{
+    position: absolute;
+    left:99px;
+    top:70px;
+    width:12px;
+    height:12px;
+}
+/* 下限上调箭头 */
+#setAirTempRange .set:nth-child(2) .img1 .triDown
+{
+    position:absolute;
+    left:99px;
+    top:92px;
+    width:12px;
+    height:12px;
+}
+/* 波浪线 */
+#setAirTempRange .set:nth-child(2) .lianjie
+{
+    position:absolute;
+    left:123px;
+    top:76px;
+}
+/* 上限文本框 */
+#setAirTempRange .set:nth-child(2) #inputMax
+{
+    position:absolute;
+    left:142px;
+    top:78px;
+    width:35px;
+    height:14px;
+    font-family: Arial;
+    font-size:14px;
+    text-align: right;
+}
+/* 温度 “°C”*/
+#setAirTempRange .set:nth-child(2) .unit:nth-child(5)
+{
+    position:absolute;
+    /* 175 */
+    left:186px;
+    top: 80px;
+    font-family:Arial;
+    font-size: 14px;
+}
+/* 上限上调箭头 */
+#setAirTempRange .set:nth-child(2) .img2 .triUp
+{
+    position:absolute;
+    left:196px;
+    top:70px;
+    width:12px;
+    height:12px;
+}
+/* 上限下调箭头 */
+#setAirTempRange .set:nth-child(2) .img2 .triDown
+{
+    position:absolute;
+    left:196px;
+    top:92px;
+    width:12px;
+    height:12px;
+}
+/* 更改按钮 */
+#setAirTempRange .btnChange
+{
+    position:absolute;
+    left:97px;
+    top:136px;
+    outline: none;
+    border:none;
+    border-radius: 5px;
+    background: #999999;
+    font-size: 12px;
+    font-weight: bold;
+    color:#ffffff;
+    width:60px;
+    height:25px;
+    cursor: pointer;
+}
+/* 分割线 */
+#setAirTempRange hr
+{
+    position:absolute;
+    left:43px;
+    top:176px;
+    width:168px;
+    height:1px;
+}
+/* 设置适宜空气湿度范围 */
+#setAirMoistRange .set:nth-child(1)
+{
+    position:absolute;
+    left:56px;
+    top:186px;
+    font-family:"微软雅黑";
+    font-size: 14px;
+    color:#333333;
+}
+/* 空气湿度的颜色 */
+#setAirMoistRange .set:nth-child(1) #airMoist{
+    color:#0099FF;
+}
+/* 调节按钮 */
+/* 下限文本框 */
+#setAirMoistRange .set:nth-child(2) #inputMin
+{
+    position:absolute;
+    left:55px;
+    top:248px;
+    width:35px;
+    height:14px;
+    font-family: Arial;
+    font-size:14px;
+    text-align: right;
+}
+/* 湿度 “%”*/
+#setAirMoistRange .set:nth-child(2) .unit:nth-child(2)
+{
+    position:absolute;
+    left:99px;
+    /* 247 */
+    top: 249px;
+    font-family:Arial;
+    font-size: 14px;
+    color:#333333;
+    font-weight:lighter;
+}
+/* 下限上调箭头 */
+#setAirMoistRange .set:nth-child(2) .img1 .triUp
+{
+    position: absolute;
+    left:99px;
+    top:240px;
+    width:12px;
+    height:12px;
+}
+/* 下限下调箭头 */
+#setAirMoistRange .set:nth-child(2) .img1 .triDown
+{
+    position: absolute;
+    left:99px;
+    top:262px;
+    width:12px;
+    height:12px;
+}
+/* 波浪线 */
+#setAirMoistRange .set:nth-child(2) .lianjie
+{
+    position: absolute;
+    left:123px;
+    /* 247 */
+    top:245px;
+}
+/* 上限文本框 */
+#setAirMoistRange .set:nth-child(2) #inputMax
+{
+    position: absolute;
+    left:143px;
+    top:248px;
+    width:35px;
+    height:14px;
+    font-family: Arial;
+    font-size:14px;
+    text-align: right;
+}
+/* 湿度 “%”*/
+#setAirMoistRange .set:nth-child(2) .unit:nth-child(5)
+{
+    position: absolute;
+    /* 176 */
+    left:187px;
+    /* 247 */
+    top:249px;
+    font-family:Arial;
+    font-size: 14px;
+}
+/* 上限上调箭头 */
+#setAirMoistRange .set:nth-child(2) .img2 .triUp
+{
+    position: absolute;
+    left:197px;
+    top:240px;
+    width:12px;
+    height:12px;
+}
+/* 上限下调箭头 */
+#setAirMoistRange .set:nth-child(2) .img2 .triDown
+{
+    position: absolute;
+    left:197px;
+    top:262px;
+    width:12px;
+    height:12px;
+}
+/* 更改按钮 */
+#setAirMoistRange .btnChange
+{
+    position: absolute;
+    left:97px;
+    top:315px;
+    width:60px;
+    height:25px;
+    outline: none;
+    border:none;
+    border-radius: 5px;
+    background: #999999;
+    font-size: 12px;
+    font-weight: bold;
+    color:#ffffff;
+    cursor: pointer;
+}
+/* 分割线 */
+#setAirMoistRange hr
+{
+    position: absolute;
+    left:43px;
+    top:355px;
+    width:168px;
+    height:1px;
+}
+/* 设置适宜土壤温度范围 */
+#setSoilTempRange .set:nth-child(1)
+{
+    position: absolute;
+    left:56px;
+    top:365px;
+    font-family:"微软雅黑";
+    font-size: 14px;
+    color:#333333;
+}
+/*土壤温度的颜色 */
+#setSoilTempRange .set:nth-child(1) #soilTemp{
+    color:#66cc00;
+}
+/* 调节按钮 */
+/* 下限文本框 */
+#setSoilTempRange .set:nth-child(2) #inputMin
+{
+    position: absolute;
+    left:55px;
+    top:418px;
+    width:35px;
+    height:14px;
+    font-family: Arial;
+    font-size:14px;
+    text-align: right;
+}
+/* 温度 “°C”*/
+#setSoilTempRange .set:nth-child(2) .unit:nth-child(2)
+{
+    position: absolute;
+    left:99px;
+    /* 417 */
+    top:419px;
+    font-family:Arial;
+    font-size: 14px;
+    color:#333333;
+    font-weight:lighter;
+}
+/* 下限上调箭头 */
+
+/* 设置适宜土壤湿度范围 */
+
+/* 设置适宜光照强度范围 */
+#setLightIntensity .set:nth-child(1)
+{
+    position: absolute;
+    left:56px;
+    top:714px;
+    font-family:"微软雅黑";
+    font-size: 14px;
+    color:#333333;
+}
+/*光照强度的颜色 */
+#setLightIntensity .set:nth-child(1) #lightIntensity{
+    color:#66cc00;
+}
+/* 调节按钮 */
+/* 下限文本框 */
+#setLightIntensity .set:nth-child(2) #inputMin
+{
+    position: absolute;
+    left:40px;
+    top:758px;
+    width:50px;
+    height:14px;
+    font-family: Arial;
+    font-size:14px;
+    text-align: right;
+}
+/* 光照强度 “LUX”*/
+#setLightIntensity .set:nth-child(2) .unit:nth-child(2)
+{
+    position: absolute;
+    /* 78 */
+    left:98px;
+    /* 757 */
+    top:759px;
+    font-family:Arial;
+    font-size: 14px;
+    color:#333333;
+    font-weight:lighter;
+}
+/* 下限上调箭头 */
+#setLightIntensity .set:nth-child(2) .img1 .triUp
+{
+    position: absolute;
+    left:99px;
+    top:750px;
+    width:12px;
+    height:12px;
+}
+/* 下限下调箭头 */
+#setLightIntensity .set:nth-child(2) .img1 .triDown
+{
+    position: absolute;
+    left:99px;
+    top:772px;
+    width:12px;
+    height:12px;
+}
+/* 波浪线 */
+#setLightIntensity .set:nth-child(2) .lianjie
+{
+    position: absolute;
+    left:123px;
+    top:757px;
+}
+/* 上限文本框 */
+#setLightIntensity .set:nth-child(2) #inputMax
+{
+    position: absolute;
+    left:138px;
+    top:758px;
+    width:50px;
+    height:14px;
+    font-family: Arial;
+    font-size:14px;
+    text-align: right;
+}
+/* 温度 “LUX”*/
+#setLightIntensity .set:nth-child(2) .unit:nth-child(5)
+{
+    position:absolute;
+    left:196px;
+    /* 757 */
+    top:759px;
+    font-family:Arial;
+    font-size: 14px;
+}
+/* 上限上调箭头 */
+#setLightIntensity .set:nth-child(2) .img2 .triUp
+{
+    position:absolute;
+    left:217px;
+    top:750px;
+    width:12px;
+    height:12px;
+}
+/* 上限下调箭头 */
+#setLightIntensity .set:nth-child(2) .img2 .triDown
+{
+    position:absolute;
+    left:217px;
+    top:772px;
+    width:12px;
+    height:12px;
+}
+/* 更改按钮 */
+#setLightIntensity .btnChange
+{
+    position: absolute;
+    left:97px;
+    top:834px;
+    width:60px;
+    height:25px;
+    outline: none;
+    border:none;
+    border-radius: 5px;
+    background: #999999;
+    font-size: 12px;
+    font-weight: bold;
+    color:#ffffff;
+    cursor: pointer;
+}
+/* 分割线 */
+#setLightIntensity hr
+{
+    position: absolute;
+    left:243px;
+    top:874px;
+    width:168px;
+    height:1px;
+}
+/* 内容显示区域右边控制开关部分 */
+#right-switch{
+    width:60.5%;
+    height:527px;
+    float: right;
+    margin-right: 50px; 
+    margin-top:11px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+/* 页面右边开关控制每一种设备部分的样式 */
+.btnSingleLi:nth-child(1)
+{
+    margin-top:0px;
+}
+.btnSingleLi{
+    width:579px;
+    height:110px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    background: #fff;
+}
+/* 设备照片 */
+.btnSingleLi .device .images{
+    position:absolute;
+    width:40px;
+    height:40px;
+    left:44px;
+    top:26px;
+}
+/* 设备类型名 */
+.btnSingleLi .device .deviceText{
+    position: absolute;
+    left:34px;
+    top:71px;
+    width:60px;
+    text-align: center;
+    font-size: 14px;
+    color:#000000;
+    font-family: 'Microsoft YaHei Regular', 'Microsoft YaHei';
+}
+/* 自动开启 */
+.btnSingleLi .autoConfig{
+    position: absolute;
+    width:218px;
+    height:30px;
+    left:312px;
+    top:49px;
+}
+.btnSingleLi .autoConfigForBGD{
+    position: absolute;
+    width:300px;
+    height:50px;
+    left:267px;
+    top:50px;
+}
+/* 自动开启复选框 */
+.autoConfig .checkbox{
+    position:absolute;
+    width:13px;
+    height:13px;
+    left:0px;
+    top:2px;
+}
+.autoConfigForBGD .checkbox{
+    position:absolute;
+    width:13px;
+    height:13px;
+    left:0px;
+    top:1px;
+}
+.autoConfigForBGD span
+{
+    position: absolute;
+    font-family: "微软雅黑";
+    font-size: 12px;
+    color:#333333;
+}
+.autoConfigForBGD span:nth-child(2)
+{
+    left:16px;
+    top:0px;
+}
+.autoConfigForBGD span:nth-child(5)
+{
+    left:130px;
+    top:0px;
+}
+.autoConfigForBGD span:nth-child(8)
+{
+    left:258px;
+    top:0px;
+}
+/* 时钟图片 */
+.autoConfigForBGD img:nth-child(4)
+{
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left:102px;
+    top:-5px;
+}
+.autoConfigForBGD img:nth-child(7)
+{
+    position: absolute;
+    width: 26px;
+    height:26px;
+    left:228px;
+    top:-5px;
+}
+/* 文本框 */
+.autoConfigForBGD input:nth-child(3)
+{
+    position: absolute;
+    width:53px;
+    height:14px;
+    left:42px;
+    top:-1px;
+}
+.autoConfigForBGD input:nth-child(6)
+{
+    position: absolute;
+    width:53px;
+    height:14px;
+    left:168px;
+    top:-1px; 
+}
+/* 自动开启文本 */
+.autoConfig .autoConfigText 
+{
+    position:absolute;
+    left:15px;
+    top:0px;
+    font-family: 'Microsoft YaHei Regular', 'Microsoft YaHei';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #333333;
+}
+/* 设备选择框 */
+.btnSingleLi select{
+    width:79px;
+    height:21px;
+}
+/* 普通设备选择框 */
+.btnSingleLi .deviceSelectNormal{
+   position: absolute;
+   top:45px;
+   left:110px;
+   font-size: 12px;
+   font-family: "微软雅黑";
+}
+/* 特殊设备选择框 */
+.btnSingleLi .deviceSelectSpecial{
+   position: absolute;
+   top: 27px;
+   left:110px;
+   font-size: 12px;
+   font-family: "微软雅黑";
+}
+/* 特殊设备按钮 */
+.btnSingleLi .btnGroup{
+  position: absolute;
+  left:111px;
+  top:61px;
+}
+ .btnSingleLi .btnGroup  #currentStatus{
+    background: #66cc00;
+} 
+ .btnSingleLi .btnGroup button{
+   width:54px;
+   height: 24px;
+   font-size: 12px;
+   text-align: center;
+   vertical-align:center;
+   font-weight: 700;
+   color: #fff;
+   outline: none;
+   border:none;
+   cursor: pointer;
+   background: #CCCCCC;
+} 
+ /* 第一个按钮 */
+.btnSingleLi .btnGroup button:nth-child(1)
+{
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+/* 第三个按钮 */
+.btnSingleLi .btnGroup button:nth-child(3)
+{
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.btnSingleLi .btnGroup button:not(#currentStatus){
+    background: #CCCCCC;
+}
+.btnSingleLi .btnGroup button:not(#currentStatus):hover{
+   background: #66cc00;
+}
+/* 普通设备按钮 */
+.btnSingleLi .btnImg
+{
+    position:absolute;
+    left:209px;
+    top:47px;
+    cursor: pointer;
+}
+
+
+
+
+

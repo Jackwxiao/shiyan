@@ -1,0 +1,54 @@
+
+/* 背景图 */
+#accountForm
+{
+	display: none;
+}
+#accountForm img
+{
+	position: fixed;
+	transform:rotate(180deg);
+	-ms-transform:rotate(180deg); 	/* IE 9 */
+	-moz-transform:rotate(180deg); 	/* Firefox */
+	-webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+	-o-transform:rotate(180deg); 	/* Opera */
+	z-index: 5;
+	width:99px;
+	height:97px;
+	left:1156px;
+	top:46px;
+}
+/* 文字“个人信息” */
+#accountForm  #ownInfo
+{
+	position: fixed;
+	z-index: 6;
+	left:1174px;
+	top:80px;
+	text-decoration: none;
+	font-size: 13px;
+	color:#666666;
+}
+/* 水平线 */
+#accountForm hr
+{
+	position: fixed;
+	z-index: 6;
+	width:70px;
+	border-top:1px solid #cccccc;
+	left:1174px;
+	top:105px;
+	margin-top:0;
+    margin-bottom:0;
+}
+/* 文字“注销” */
+#accountForm  #logOff
+{
+	position: fixed;
+	z-index: 6;
+	left:1174px;
+	top:115px;
+	text-decoration: none;
+	font-size: 13px;
+	color:#666666;
+}
